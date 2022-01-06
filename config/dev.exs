@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :rockelivery, Rockelivery.Repo,
-  username: "samuelfs",
-  password: "samuelfs",
+  username: "postgres",
+  password: "postgres",
   database: "rockelivery_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

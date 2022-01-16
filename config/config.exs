@@ -20,6 +20,10 @@ config :rockelivery, Rockelivery.Auth.Guardian,
   issuer: "rockelivery",
   secret_key: "P+gvvGx9K7kUKiah8Q7N8O14U2rEPzdXuZ2advx5hamD7kv1RgYgLJ7dA97TExkU"
 
+config :rockelivery, Rockelivery.Auth.Pipeline,
+  module: Rockelivery.Auth.Guardian,
+  error_handler: Rockelivery.Auth.ErrorHandler
+
 # Configures the endpoint
 config :rockelivery, RockeliveryWeb.Endpoint,
   url: [host: "localhost"],

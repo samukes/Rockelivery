@@ -4,8 +4,7 @@ defmodule RockeliveryWeb.UserControllerTest do
   import Mox
   import Rockelivery.Factory
 
-  alias Rockelivery.ViaCep.ClientMock
-  alias RockeliveryWeb.Auth.Guardian
+  alias Rockelivery.{Auth.Guardian, ViaCep.ClientMock}
 
   describe "create/2" do
     test "when all params valid, creates user", %{conn: conn} do
@@ -75,9 +74,8 @@ defmodule RockeliveryWeb.UserControllerTest do
     end
 
     test "when there's user with id, deletes user",
-         %{conn: conn} do
-      id = "068fee54-3ef7-41d1-b322-2eb7e7d85d4c"
-      insert(:user)
+         %{conn: conn, user: user} do
+      id = user.id
 
       response =
         conn

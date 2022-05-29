@@ -1,5 +1,5 @@
-defmodule RockeliveryWeb.Auth.Guardian do
-  use Guardian, otp_app: :my_app
+defmodule Rockelivery.Auth.Guardian do
+  use Guardian, otp_app: :rockelivery
 
   alias Rockelivery.{Error, User}
   alias Rockelivery.Users.Get, as: UserGet

@@ -1,4 +1,4 @@
-defmodule RockeliveryWeb.Auth.ErrorHandler do
+defmodule Rockelivery.Auth.ErrorHandler do
   alias Guardian.Plug.ErrorHandler
   alias Plug.Conn
 

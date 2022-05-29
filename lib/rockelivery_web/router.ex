@@ -9,7 +9,7 @@ defmodule RockeliveryWeb.Router do
   end
 
   pipeline :auth do
-    plug RockeliveryWeb.Auth.Pipeline
+    plug Rockelivery.Auth.Pipeline
   end
 
   scope "/api", RockeliveryWeb do

@@ -22,9 +22,9 @@ defmodule Rockelivery.Orders.Create do
     |> handle_insert()
   end
 
-  defp handle_items({:error, result}, _params), do: {:error, Error.build(:bad_queste, result)}
+  defp handle_items({:error, result}, _params), do: {:error, Error.build(:bad_requeste, result)}
 
   defp handle_insert({:ok, %Order{}} = order), do: order
 
-  defp handle_insert({:error, result}), do: {:error, Error.build(:bad_queste, result)}
+  defp handle_insert({:error, result}), do: {:error, Error.build(:bad_requeste, result)}
 end

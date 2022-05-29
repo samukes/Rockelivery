@@ -16,9 +16,10 @@ config :rockelivery, Rockelivery.Repo,
   migration_primary_key: [type: :binary_id],
   migration_primary_key: [type: :binary_id]
 
+# Set up Guardian
 config :rockelivery, Rockelivery.Auth.Guardian,
   issuer: "rockelivery",
-  secret_key: "P+gvvGx9K7kUKiah8Q7N8O14U2rEPzdXuZ2advx5hamD7kv1RgYgLJ7dA97TExkU"
+  secret_key: "MAdZCI55BWh5kZfPedia3CSGt9EEotZl/dN9YON4GJ49v7u20x4AcwCSG2JCvOLe"
 
 config :rockelivery, Rockelivery.Auth.Pipeline,
   module: Rockelivery.Auth.Guardian,

@@ -32,7 +32,7 @@ defmodule Rockelivery.Stack do
   end
 
   @impl true
-  def handle_call(:pop, _from, [head, tail]) do
+  def handle_call(:pop, _from, [head | tail]) do
     {:reply, head, tail}
   end
 
